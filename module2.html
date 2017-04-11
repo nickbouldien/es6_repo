@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <script>
+
+    const names = ['wes', 'kait', 'lux', 'nick'];
+
+
+// arrow functions
+
+    const fullNames = names.map(function(name) {
+      return `${name} bos`;
+    });
+
+    console.log(fullNames);
+
+    const fullNames2 = names.map(name => `${name} bos`);
+    console.log(fullNames2);
+
+    const fullNames3 = names.map(() => `cool bos`);
+    console.log(fullNames3);
+
+
+    // set variable equal to an arrow function
+
+    const sayMyName = (name) => { console.log(`hello ${name}`)};
+
+    sayMyName('nick');
+
+
+
+    const race = '100m Dash';
+    const winners = ['nick bouldien', 'jake guy', 'wes bos', 'alfred nobel'];
+
+    const win = winners.map((winner,i) => ({name: winner, race, place: i+1}))
+      // race can be used for race: race
+    console.log(win);
+
+
+const ages = [23, 62, 45, 81, 29, 18, 34, 43, 19, 15, 67, 83, 79, 18, 14];
+
+const old = ages.filter(age => age >= 60);
+console.log(old);
+
+
+
+
+
+  </script>
+
+
+
+
+
+  </body>
+</html>

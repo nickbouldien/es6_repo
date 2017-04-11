@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script>
+
+//var is function scoped
+// let and const are block scoped
+
+    function setWidth(){
+
+    }
+    var width = 100;
+    console.log(width);
+
+    let height = 200;
+    const key = 'abc123';
+
+
+
+/// let vs const:
+
+  var points = 50;
+  let winner = false;
+
+//  var points = 60; //doesn't work
+
+if(points > 0) {
+    console.log('it ran');
+    let winner = true;
+} // there are now two versions of winner.  will still say false
+// var winner for both and it will return true (updates)
+
+// key = 'abc321';  //cant change the const key
+
+
+{
+  const name = 'nick';
+  console.log(name);
+}
+
+
+
+
+
+
+    </script>
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
