@@ -47,7 +47,30 @@ const ages = [23, 62, 45, 81, 29, 18, 34, 43, 19, 15, 67, 83, 79, 18, 14];
 const old = ages.filter(age => age >= 60);
 console.log(old);
 
+// default function arugments:
 
+function calculateBill(total, tax = 0.13, tip = 0.15) {
+  // if(tax === undefined) {
+  //   tax = 0.13;
+  // }
+  // if(tip === undefined){
+  //   tip = 0.15;
+  // }
+
+      // or
+  // tax = tax || 0.13;
+  // tip = tip || 0.15;
+
+
+// es6 version passed in in the arguments
+
+  return total + (total*tax) + (total * tip);
+}
+
+//const totalBill = calculateBill(100,0.13, 0.15);
+//const totalBill = calculateBill(100);
+const totalBill = calculateBill(100, undefined, 0.25); // to pass in undefined tax (skip it))
+console.log(totalBill);
 
 
 
